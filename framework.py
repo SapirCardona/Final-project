@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from Sapir.Finalproject import POC
+
 app = Flask(__name__)
 
 
@@ -10,27 +10,31 @@ def home():
 
 @app.route("/Sign")
 def sign():
-    return render_template("Sign.html")
+    title = "Sign"
+    return render_template("Sign.html", title=title)
 
 @app.route("/Business_entry")
 def business_entry():
-    return render_template("Business_entry.html")
+    title = "Business entry"
+    return render_template("Business_entry.html", title=title)
 
 @app.route("/Shopping_bag")
 def shopping_bag():
-    return render_template("Shopping_bag.html")
+    title = "Shopping bag"
+    return render_template("Shopping_bag.html", title=title)
 
 @app.route("/POC")
 def poc():
+    title = "POC"
     Store_name = "Nike"
     Categories = ["Men", "Woman", "Boys", "Girls", "Baby"]
     Items=["Shirt", "Pants"]
     Sizes=["S", "M", "L"]
-    return render_template("POC page.html", store_name=Store_name, categories=Categories, items=Items, sizes=Sizes)
-
+    return render_template("POC page.html", store_name=Store_name, categories=Categories, items=Items, sizes=Sizes, title=title)
 
 @app.route("/add_to_shopping_bag")
 def add_to_shopping_bag():
+    pass
 
 
 

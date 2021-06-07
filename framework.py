@@ -2,6 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def home():
     title = "Fashi.on the way"
@@ -34,6 +35,8 @@ def poc():
 @app.route("/add_to_shopping_bag")
 def add_to_shopping_bag():
     pass
+
+
 
 if __name__ == "__main__":
     app.run()

@@ -18,11 +18,6 @@ def business_entry():
     title = "Business entry"
     return render_template("Business_entry.html", title=title)
 
-@app.route("/Shopping_bag")
-def shopping_bag():
-    title = "Shopping bag"
-    return render_template("Shopping_bag.html", title=title)
-
 @app.route("/POC")
 def poc():
     title = "POC"
@@ -32,11 +27,10 @@ def poc():
     Sizes=["S", "M", "L"]
     return render_template("POC page.html", store_name=Store_name, categories=Categories, items=Items, sizes=Sizes, title=title)
 
-@app.route("/add_to_shopping_bag")
-def add_to_shopping_bag():
-    pass
-
-
+@app.route("/Cart", methods=["POST"])
+def cart():
+    title = "Shopping cart"
+    return render_template("Cart.html", title=title, color=color, size=size)
 
 if __name__ == "__main__":
     app.run()

@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -29,6 +29,8 @@ def poc():
 @app.route("/Cart", methods=["GET"])
 def cart():
     title = "Shopping cart"
+    color = request.form.get("color")
+    size = request.form.get("size")
     return render_template("Cart.html", title=title, color=color, size=size)
 
 if __name__ == "__main__":

@@ -1,10 +1,6 @@
 {% extends 'Base.html' %}
 {% block content %}
-<script>
-function add_to_shopping_bag() {
-  document.getElementById("shoppingbag").innerHTML = "Added to shopping bag!";
-}
-</script>
+
   <div class="container">
           <img src="https://fullstop360.com/blog/wp-content/uploads/2020/09/Movement.jpg" width="1000" height="300" >
         <h1>POC page</h1>
@@ -25,24 +21,27 @@ function add_to_shopping_bag() {
       <h5 class="card-title">Shirt 1</h5>
       <p class="card-text">Shirt description</p>
       <div>
-        <form action="/Cart" method="POST">
-      <select class="form-select" name="color" aria-label="Default select example">
-        <option selected>Color</option>
-        <option value="1">Black</option>
-        <option value="2">White</option>
-        <option value="3">Blue</option>
-      </select>
-      <div>
-  <select class="form-select" name="size" aria-label="Default select example">
-  <option selected>Size</option>
-  <option value="1">S</option>
-  <option value="2">M</option>
-  <option value="3">L</option>
-</select>
+        <form action="/Cart" method="POST" role="form">
+          <input type="text" class="form-control" id="exampleInput" aria-describedby="emailHelp" name="test">
+          <select class="form-select" name="color" aria-label="Default select example">
+            <option selected>Color</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+            <option value="Blue">Blue</option>
+          </select>
+          <div>
+            <select class="form-select" name="size" aria-label="Default select example">
+              <option selected>Size</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" id="shoppingbag" class="btn btn-dark">Add to shoppping bag</button>
+          </div>
         </form>
-</div>
       </div>
-                  <a  id="shoppingbag" onclick="add_to_shopping_bag()" href="/Cart" class="btn btn-dark">Add to shoppping bag</a>
     </div>
   </div>
   <div class="col">

@@ -2,7 +2,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
     title = "Fashi.on the way"
@@ -27,7 +26,7 @@ def poc():
     Sizes=["S", "M", "L"]
     return render_template("POC page.html", store_name=Store_name, categories=Categories, items=Items, sizes=Sizes, title=title)
 
-@app.route("/Cart", methods=["POST"])
+@app.route("/Cart", methods=["GET"])
 def cart():
     title = "Shopping cart"
     return render_template("Cart.html", title=title, color=color, size=size)

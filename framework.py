@@ -1,10 +1,6 @@
-from datetime import datetime
 from flask import Flask, render_template, request
-from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///site.db'
-db = SQLAlchemy(app)
 
 @app.route("/")
 def home():
@@ -33,10 +29,19 @@ def poc():
 @app.route("/Cart", methods=["POST"])
 def cart():
     title = "Shopping cart"
-    test = request.form.get("test")
     color = request.form.get("color")
     size = request.form.get("size")
-    return render_template("Cart.html", title=title, test=test, color=color, size=size)
+    return render_template("Cart.html", title=title, color=color, size=size)
+
+@app.route("/User", methods=["POST"])
+def user():
+    title = "User's page"
+    email = request.form.get("email")
+    name = request.form.get("name")
+    country = request.form.get("country")
+    street_and_number = request.form.get("street_and_number")
+    zip = request.form.get("zip")
+    return render_template("User.html", title=title, email=email, name=name, country=country, street_and_number=street_and_number, zip=zip)
 
 if __name__ == "__main__":
     app.run()

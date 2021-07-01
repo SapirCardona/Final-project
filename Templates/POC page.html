@@ -1,5 +1,10 @@
 {% extends 'Base.html' %}
 {% block content %}
+<script>
+function add_to_shopping_bag() {
+  document.getElementById("shoppingbag").innerHTML = "Added to shopping bag!";
+}
+</script>
   <div class="container">
           <img src="https://fullstop360.com/blog/wp-content/uploads/2020/09/Movement.jpg" width="1000" height="300" >
         <h1>POC page</h1>
@@ -20,30 +25,25 @@
       <h5 class="card-title">Shirt 1</h5>
       <p class="card-text">Shirt description</p>
       <div>
-      <select class="form-select" aria-label="Default select example">
+        <form action="/Cart" method="POST">
+      <select class="form-select" name="color" aria-label="Default select example">
         <option selected>Color</option>
         <option value="1">Black</option>
         <option value="2">White</option>
         <option value="3">Blue</option>
       </select>
       <div>
-
-  <select class="form-select" aria-label="Default select example">
+  <select class="form-select" name="size" aria-label="Default select example">
   <option selected>Size</option>
   <option value="1">S</option>
   <option value="2">M</option>
   <option value="3">L</option>
 </select>
+        </form>
 </div>
       </div>
-                  <a  id="shoppingbag" onclick="add_to_shopping_bag()" class="btn btn-dark">Add to shoppping bag</a>
+                  <a  id="shoppingbag" onclick="add_to_shopping_bag()" href="/Cart" class="btn btn-dark">Add to shoppping bag</a>
     </div>
-
-<script>
-function add_to_shopping_bag() {
-  document.getElementById("shoppingbag").innerHTML = "Added to shopping bag!";
-}
-</script>
   </div>
   <div class="col">
     <div class="card h-100">

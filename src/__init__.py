@@ -12,7 +12,8 @@ def init_app():
     db.init_app(app)
 
     with app.app_context():
-        from . import framework  # Import routes
+        from . import routes  # Import routes
+        print("the secret is:" + app.config["SQLALCHEMY_DATABASE_URI"])
         db.create_all()  # Create sql tables for our data models
 
         return app

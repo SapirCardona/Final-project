@@ -16,10 +16,10 @@ def home():
     print(items)
     return render_template("index.html", title=title)
 
-@app.route("/Sign")
-def sign():
-    title = "Sign"
-    return render_template("Sign.html", title=title)
+@app.route("/login")
+def login():
+    title = "login"
+    return render_template("Log-in.html", title=title)
 
 
 @app.route("/Business_entry")

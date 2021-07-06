@@ -39,11 +39,15 @@ def poc():
                            title=title)
 
 
-@app.route("/Cart", methods=["POST"])
+@app.route("/Cart", methods=["POST", "GET"])
 def cart():
     title = "Shopping cart"
     color = request.form.get("color")
     size = request.form.get("size")
+    if color is None:
+        color = ""
+    if size is None:
+        size = ""
     return render_template("Cart.html", title=title, color=color, size=size)
 
 

@@ -1,13 +1,19 @@
 from flask import render_template, request
 from flask import current_app as app
-from .Database import db, Users
+from .Database import db, Users, Stores, Orders, Items
 
 
 @app.route("/")
 def home():
     title = "Fashi.on the way"
-    users = Users.query.all(),
+    users = Users.query.all()
+    stores = Stores.query.all()
+    orders = Orders.query.all()
+    items = Items.query.all()
     print(users)
+    print(stores)
+    print(orders)
+    print(items)
     return render_template("index.html", title=title)
 
 @app.route("/Sign")

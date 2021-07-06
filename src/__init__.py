@@ -13,7 +13,6 @@ def init_app():
 
     with app.app_context():
         from . import routes  # Import routes
-        print("the secret is:" + app.config["SQLALCHEMY_DATABASE_URI"])
         db.create_all()  # Create sql tables for our data models
 
         return app

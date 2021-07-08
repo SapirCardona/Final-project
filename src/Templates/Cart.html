@@ -1,13 +1,41 @@
 {% extends 'Base.html' %}
 {% block content %}
   <div class="container">
-        <h1>Welcome to shopping cart page!</h1>
+        <h1 align="center">Welcome to shopping cart page!</h1>
   </div>
 
 <br><br/>
 
-<div>
-    {{ color }} {{ size }}
+<div  style="width: 50rem; margin:0 auto;">
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Size</th>
+            <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+            <td>{{ color }}</td>
+            <td>{{ size }}</td>
+            <td>{{ price }}</td>
+
+
+        </tr>
+<!--        <tr>-->
+<!--          <th scope="row">2</th>-->
+<!--&lt;!&ndash;          <td>{{ size }}</td>&ndash;&gt;-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <th scope="row">3</th>-->
+<!--&lt;!&ndash;          <td colspan="2">Larry the Bird</td>&ndash;&gt;-->
+<!--&lt;!&ndash;          <td>@twitter</td>&ndash;&gt;-->
+<!--        </tr>-->
+      </tbody>
+    </table>
 </div>
 
   {% endblock %}

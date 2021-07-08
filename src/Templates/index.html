@@ -8,15 +8,15 @@
 </div>
 <br></br>
 
-  <div class="container">
+  <div class="container" >
   <form class="row g-3">
   <div class="col-auto">
     <label for="shipping address" class="visually-hidden">Shipping address</label>
     <input type="text" readonly class="form-control-plaintext" id="shipping address">
   </div>
-  <div class="col-auto">
-    <label for="input address" class="visually-hidden">Password</label>
-    <input type="text" class="form-control" id="input address" placeholder="Shipping address">
+  <div class="col-auto" >
+    <label for="input address" class="visually-hidden"></label>
+    <input  type="text" class="form-control" id="input address" placeholder="Shipping address">
   </div>
   <div class="col-auto">
     <button type="Search" class="btn btn-primary mb-3">Search</button>
@@ -24,4 +24,48 @@
 </form>
 </div>
 
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://therockbury.com/wp-content/uploads/2014/03/HM-logo.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">H&M</h5>
+          <p class="card-text">store description</p>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Go to H&M!</button>
+              </div>
+      </div>
+    </div>
+    <div class="col">
+      <form action="/POC">
+        <div class="card h-100">
+        <img src="https://i.pinimg.com/originals/d8/51/ef/d851efb8400966899b2a8035b37f356a.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Nike</h5>
+          <p class="card-text">store description</p>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Go to Nike!</button>
+              </div>
+      </div>
+      </form>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.new4u.co.il/wp-content/uploads/2017/03/logo-yellow-800x800.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Noizz</h5>
+          <p class="card-text">store description</p>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Go to Noizz!</button>
+              </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://media.easy.co.il/images/PICS/4031595.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Studio Pasha</h5>
+          <p class="card-text">store description</p>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Go to Studio Pasha!</button>
+              </div>
+      </div>
+    </div>
+  </div>
   {% endblock %}

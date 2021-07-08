@@ -1,0 +1,50 @@
+{% extends 'Base.html' %}
+{% block content %}
+  <div class="container">
+        <h1>Log-in customer page</h1>
+  </div>
+
+<div class="card text-left">
+    <div class="col-sm-15">
+      <div class="card-body">
+        <h5 class="card-title">New user?</h5>
+      <div class="container">
+        <form class="row g-3" action="/User" method="post">
+          <div class="col-md-3">
+            <label for="inputFirstName" class="form-label">First Name</label>
+            <input name="first_name" type="first_name" class="form-control" id="inputFirstName">
+          </div>
+                <div class="col-md-3">
+            <label for="inputLastName" class="form-label">Last Name</label>
+            <input name="last_name" type="last_name" class="form-control" id="inputLastName">
+          </div>
+          <div class="col-md-3">
+            <label for="inputPhone" class="form-label">Phone number</label>
+            <input name="phone_number" type="phone_number" class="form-control" id="inputPhone">
+          </div>
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input name="password" type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-3">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input class="form-control" id="inputAddress" name="address" type="address">
+          </div>
+            <div class="col-md-3">
+            <label for="inputType" class="form-label">Type</label>
+            <select id="inputType" class="form-select" name="type">
+            <option value="Customer">customer</option>
+            <option value="Business">Business</option>
+            </select>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-dark">Sign Up</button>
+            </div>
+        </form>
+      </div>
+</div>
+  {% endblock %}

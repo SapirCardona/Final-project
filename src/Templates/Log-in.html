@@ -1,46 +1,33 @@
 {% extends 'Base.html' %}
 {% block content %}
   <div class="container">
-        <h1>Log-in page</h1>
+        <h1 align="center">Log-in page</h1>
   </div>
+<br></br>
+<div class="card text-center" style="width: 30rem; margin:0 auto;" >
+  <h5 class="card-title">Let's sign in!</h5>
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <a href="/" class="btn btn-dark">Sign in</a>
+  </form>
+    <br></br>
 
-<div class="container">
-    <form class="row g-3" action="/User" method="post">
-          <div class="col-md-6">
-    <label for="inputName" class="form-label">Full Name</label>
-    <input name="name" type="name" class="form-control" id="inputName">
-  </div>
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input name="email" type="email" class="form-control" id="inputEmail4">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input name="password" type="password" class="form-control" id="inputPassword4">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Street and number</label>
-    <input name="street_and_number" type="text" class="form-control" id="inputAddress">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input name="city" type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">Country</label>
-    <select id="inputState" class="form-select" name="country">
-      <option>Israel</option>
-      <option>US</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input name="zip" type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </div>
-</form>
-
+    <div>
+      <form action="/login_customer" method="get">
+          <p class="card-text">New user?</p>
+          <button type="submit" class="btn btn-dark">Sign up</button>
+      </form>
+    </div>
 </div>
+
+
   {% endblock %}

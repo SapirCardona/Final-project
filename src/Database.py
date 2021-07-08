@@ -20,6 +20,10 @@ class Users(db.Model):
         unique=True,
         nullable=False
     )
+    password = db.Column(
+        db.Text,
+        nullable=False
+    )
     address = db.Column(
         db.String(200),
         nullable=False

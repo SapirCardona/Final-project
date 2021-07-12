@@ -1,0 +1,131 @@
+{% extends 'Base.html' %}
+{% block content %}
+
+<br></br>
+
+  <div class="container">
+    <img src="https://seamall.co.il/wp-content/uploads/2019/05/PAS.jpg" width="1000" height="300" >
+      <h1>{{ store.name }}</h1>
+  </div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.studiopasha.co.il/pub/media/catalog/product/cache/46189b5ef89fe0588b5d18286791ab51/p/r/project_20210427_0104.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+                 <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="https://www.studiopasha.co.il/pub/media/catalog/product/cache/46189b5ef89fe0588b5d18286791ab51/d/f/dfgdfgbfbghj_307_.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.studiopasha.co.il/pub/media/catalog/product/cache/46189b5ef89fe0588b5d18286791ab51/a/n/aneetty_309_.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.studiopasha.co.il/pub/media/catalog/product/cache/46189b5ef89fe0588b5d18286791ab51/d/f/dfgdsgsfcvdx_258_.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

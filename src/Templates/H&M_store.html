@@ -1,0 +1,131 @@
+{% extends 'Base.html' %}
+{% block content %}
+
+<br></br>
+
+  <div class="container">
+    <img src="https://www.accessurf.org/wp-content/uploads/bfi_thumb/HM-Logo-2yase0t1xv1xw0mj2n80znqbgcrdqtejrwrrd88cr20opw6io.jpg" width="1000" height="300" >
+      <h1>{{ store.name }}</h1>
+  </div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://i.dailymail.co.uk/i/newpix/2018/05/08/13/4BF88F1000000578-5702703-H_M_have_launched_a_new_modest_clothing_line_featuring_hemlines_-m-9_1525781978143.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+                 <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/originals/80/88/99/808899d812e8fe90bc05ad3d7f1beb98.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.dalook.co.il/files/desginers/f_5143_27511_27512_216201812471334377.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.dalook.co.il/files/desginers/f_5143_27511_27512_2162018124558760875.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

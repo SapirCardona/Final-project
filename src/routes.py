@@ -1,3 +1,6 @@
+import os
+import smtplib
+
 from flask import render_template, request, make_response, before_render_template
 from flask import current_app as app
 from .Database import db, Users, Stores, Orders, Items
@@ -7,9 +10,9 @@ from .Database import db, Users, Stores, Orders, Items
 def home():
     title = "Fashi.on the way"
     # users = Users.query.all()
-    # stores = Stores.query.all()
+    # stores = Stores.query.get(1)
     # orders = Orders.query.all()
-    # items = Items.query.all()
+    # items = Items.query.get(store_id)
     # print(users)
     # print(stores)
     # print(orders)
@@ -39,22 +42,37 @@ def login_customer():
                            email=email, address=address, password=password,
                            type=type)
 
+@app.route("/NIKE_STORE")
+def nike_store():
+    store = Stores.query.get(1)
+    return render_template("Nike_store.html", store=store)
 
-# @app.route("/Business_entry")
-# def business_entry():
-#     title = "Business entry"
-#     return render_template("Business_entry.html", title=title)
+@app.route("/H&M_STORE")
+def hndm_store():
+    store = Stores.query.get(2)
+    return render_template("H&M_store.html", store=store)
+
+@app.route("/NOIZZ_STORE")
+def noizz_store():
+    store = Stores.query.get(3)
+    return render_template("Noizz_store.html", store=store)
+
+@app.route("/STUDIO_PASHA_STORE")
+def studio_pasha_store():
+    store = Stores.query.get(4)
+    return render_template("Studio_Pasha_store.html", store=store)
 
 
-@app.route("/POC")
-def poc():
-    title = "POC"
-    Store_name = "Nike"
-    Categories = ["Men", "Woman", "Boys", "Girls", "Baby"]
-    Items = ["Shirt", "Pants"]
-    Sizes = ["S", "M", "L"]
-    return render_template("POC page.html", store_name=Store_name, categories=Categories, items=Items, sizes=Sizes,
-                           title=title)
+@app.route("/form", methods=["POST"])
+def form():
+    email = request.form.get("email")
+
+    message = "Your order has been confirmed!"
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login("sapir.matari@gmail.com", os.environ.get("Password_google"))
+    server.sendmail("sapir.matari@gmail.com", email, message)
+    return render_template("index.html", email=email)
 
 
 @app.route("/Cart", methods=["POST", "GET"])
@@ -96,30 +114,8 @@ def user():
                            email=email, password=password, type=type)
 
 
-def user_login():
-    """Create a user via query string parameters."""
-    first_name = request.args.get('first_name')
-    last_name = request.args.get('last_name')
-    phone_number = request.args.get('phone_number')
-    address = request.args.get('address')
-    type = request.args.get('type')
-    email = request.args.get('email')
-    if email:
-        existing_user = Users.query.filter(
-            Users.email == email
-        ).first()
-        if existing_user:
-            return make_response(
-                f'Sorry! ({email}) already exist in our system!'
-            )
-        else:
-            new_user = Users(
-                first_name=first_name,
-                last_name=last_name,
-                phone_number=phone_number,
-                address=address,
-                type=type,
-                email=email,
-            )  # Create an instance of the Users class
-        db.session.add(new_user)  # Adds new User record to database
-        db.session.commit()  # Commits all changes
+# @app.route("/stores", methods=["GET"])
+# def stores():
+#     store = Stores.query.get(1)
+#     render_template("stores.html", store=store)
+

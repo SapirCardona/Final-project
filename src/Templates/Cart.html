@@ -1,5 +1,12 @@
 {% extends 'Base.html' %}
 {% block content %}
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
   <div class="container">
         <h1 align="center">Welcome to shopping cart page!</h1>
   </div>
@@ -22,8 +29,16 @@
             <td>{{ color }}</td>
             <td>{{ size }}</td>
             <td>{{ price }}</td>
-
-
+        </tr>
+                          <th scope="row">Shipping</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+                  <th scope="row">Total</th>
+            <td></td>
+            <td></td>
+            <td>{{ price }}</td>
         </tr>
 <!--        <tr>-->
 <!--          <th scope="row">2</th>-->
@@ -36,6 +51,22 @@
 <!--        </tr>-->
       </tbody>
     </table>
+</div>
+<br></br>
+
+<div>
+    <form action="form" method="post">
+        <div class="mb-3" style="width: 24rem; margin:0 auto;">
+            <label for="exampleInputEmail1" class="form-label">Email:</label>
+            <input type="email"  name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Confirmation email will be sent to this address.
+                <div class="popup" onclick="myFunction()">
+                    <span class="popuptext" id="myPopup">Order conformed! please check your email.</span>
+                    <button type="submit" class="btn btn-dark">CONFIRM</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
   {% endblock %}

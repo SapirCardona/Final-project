@@ -1,5 +1,12 @@
 {% extends 'Base.html' %}
 {% block content %}
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
   <div class="container">
         <h1 align="center">Log-in page</h1>
   </div>
@@ -22,7 +29,7 @@
     <br></br>
 
     <div>
-      <form action="/login_customer" method="get">
+      <form action="login_customer" method="get">
           <p class="card-text">New user?</p>
           <button type="submit" class="btn btn-dark">Sign up</button>
       </form>

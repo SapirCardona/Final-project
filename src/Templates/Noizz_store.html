@@ -1,0 +1,130 @@
+{% extends 'Base.html' %}
+{% block content %}
+
+<br></br>
+
+  <div class="container">
+    <img src="https://www.axelspringer.com/data/uploads/2019/05/noizz.png" width="1000" height="300" >
+      <h1>{{ store.name }}</h1>
+  </div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.noizz.co.il/pub/media/catalog/product/cache/0c10cf84d9daea477b73908a03179de8/6/6/66385-33-1-16208095433843201.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+                 <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="https://www.noizz.co.il/pub/media/catalog/product/cache/0c10cf84d9daea477b73908a03179de8/6/6/66122-C7-1-16208094103529640.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.noizz.co.il/pub/media/catalog/product/cache/0c10cf84d9daea477b73908a03179de8/1/6/16167-16-1-16213680163526070.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://www.noizz.co.il/pub/media/catalog/product/cache/099866b90cad259a1df72fa3b5ee4e5a/1/6/16213-11-1-16208086632729737.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title" align="center">Item name</h5>
+          <p class="card-text">Item description</p>
+         <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <h5 align="center" class="card-title">50$</h5>
+                <button name="price" value="50$" type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

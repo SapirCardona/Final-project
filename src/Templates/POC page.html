@@ -1,0 +1,179 @@
+{% extends 'Base.html' %}
+{% block content %}
+
+  <div class="container">
+    <img src="https://fullstop360.com/blog/wp-content/uploads/2020/09/Movement.jpg" width="1000" height="300" >
+      <h1>POC page</h1>
+  </div>
+  <p>{{ store }}</p>
+  <div  class=container class="btn-group">
+    <button type="button" class="btn btn-dark">{{  categories.0  }}</button>
+    <button type="button" class="btn btn-dark">{{  categories.1  }}</button>
+    <button type="button" class="btn btn-dark">{{  categories.2  }}</button>
+    <button type="button" class="btn btn-dark">{{  categories.3  }}</button>
+    <button type="button" class="btn btn-dark">{{  categories.4  }}</button>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.asos-media.com/products/nike-swoosh-t-shirt-in-black/10613578-1-black?$XXL$&wid=513&fit=constrain" class="card-img-top" alt="...">
+          <h5 class="card-title">Shirt 1</h5>
+          <p  class="card-text">Shirt description</p>
+          <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 1 Black">Black</option>
+                <option value="Shirt 1 White">White</option>
+                <option value="Shirt 1 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    <div class="card h-100">
+        <img src="https://images.asos-media.com/products/nike-club-t-shirt-in-white/20818642-1-white?$XXL$&wid=513&fit=constrain" class="card-img-top" alt="...">
+          <h5 class="card-title">Shirt 2</h5>
+          <p  class="card-text">Shirt description</p>
+          <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 2 Black">Black</option>
+                <option value="Shirt 2 White">White</option>
+                <option value="Shirt 2 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+      <div class="card h-100">
+        <img src="https://i.pinimg.com/736x/01/f8/bd/01f8bdb0bbe91a4c4399efc9da0ff189.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title">Shirt 3</h5>
+          <p  class="card-text">Shirt description</p>
+        <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 3 Black">Black</option>
+                <option value="Shirt 3 White">White</option>
+                <option value="Shirt 3 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    <div class="card h-100">
+        <img src="https://images.asos-media.com/products/nike-swoosh-t-shirt-in-black/10613578-1-black?$XXL$&wid=513&fit=constrain" class="card-img-top" alt="...">
+          <h5 class="card-title">Shirt 4</h5>
+          <p  class="card-text">Shirt description</p>
+          <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 4 Black">Black</option>
+                <option value="Shirt 4 White">White</option>
+                <option value="Shirt 4 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    <div class="card h-100">
+        <img src="https://images.asos-media.com/products/nike-club-t-shirt-in-white/20818642-1-white?$XXL$&wid=513&fit=constrain" class="card-img-top" alt="...">
+          <h5 class="card-title">Shirt 5</h5>
+          <p  class="card-text">Shirt description</p>
+          <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 5 Black">Black</option>
+                <option value="Shirt 5 White">White</option>
+                <option value="Shirt 5 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    <div class="card h-100">
+        <img src="https://i.pinimg.com/736x/01/f8/bd/01f8bdb0bbe91a4c4399efc9da0ff189.jpg" class="card-img-top" alt="...">
+          <h5 class="card-title">Shirt 6</h5>
+          <p  class="card-text">Shirt description</p>
+          <div>
+            <form action="/Cart" method="POST" role="form">
+              <select class="form-select" name="color" aria-label="Default select example">
+                <option selected>Color</option>
+                <option value="Shirt 6 Black">Black</option>
+                <option value="Shirt 6 White">White</option>
+                <option value="Shirt 6 Blue">Blue</option>
+              </select>
+              <div>
+                <select class="form-select" name="size" aria-label="Default select example">
+                  <option selected>Size</option>
+                  <option value="Size S">S</option>
+                  <option value="Size M">M</option>
+                  <option value="Size L">L</option>
+                </select>
+              </div>
+              <div>
+                <button type="submit" id="shopping-bag" class="btn btn-dark">Add to shoppping bag</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endblock %}

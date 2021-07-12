@@ -1,0 +1,46 @@
+{% extends 'Base.html' %}
+{% block content %}
+  <div class="container">
+        <h1>Sign-in/Sign-up page</h1>
+  </div>
+
+<div class="container">
+    <form class="row g-3" action="/User" method="post">
+          <div class="col-md-6">
+    <label for="inputName" class="form-label">Full Name</label>
+    <input name="name" type="name" class="form-control" id="inputName">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input name="email" type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input name="password" type="password" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Street and number</label>
+    <input name="street_and_number" type="text" class="form-control" id="inputAddress">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input name="city" type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">Country</label>
+    <select id="inputState" class="form-select" name="country">
+      <option>Israel</option>
+      <option>US</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input name="zip" type="text" class="form-control" id="inputZip">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+
+</div>
+  {% endblock %}

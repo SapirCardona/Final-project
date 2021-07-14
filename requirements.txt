@@ -1,0 +1,17 @@
+click
+colorama
+Flask
+Flask-SQLAlchemy
+greenlet
+itsdangerous
+Jinja2
+MarkupSafe
+py-dotenv
+python-dotenv
+python-dotenv-run
+repoze.lru
+six
+sql
+SQLAlchemy
+stdlib-list
+Werkzeug

@@ -3,6 +3,6 @@
 /workspace.xml
 .idea
 fashi_on_the_way.db
-/venv
+/newvenv
 __pycache__/
 src/__pycache__/

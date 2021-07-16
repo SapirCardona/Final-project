@@ -70,7 +70,7 @@ def form():
     return render_template("index.html", email=email)
 
 
-@app.route("/Cart", methods=["POST", "GET"])
+@app.route("/cart", methods=["POST", "GET"])
 def cart():
     title = "Shopping cart"
     color = request.form.get("color")

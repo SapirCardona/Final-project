@@ -9,14 +9,6 @@ from .Database import db, Users, Stores, Orders, Items
 @app.route("/")
 def home():
     title = "Fashi.on the way"
-    # users = Users.query.all()
-    # stores = Stores.query.get(1)
-    # orders = Orders.query.all()
-    # items = Items.query.get(store_id)
-    # print(users)
-    # print(stores)
-    # print(orders)
-    # print(items)
     return render_template("index.html", title=title)
 
 
@@ -49,18 +41,18 @@ def nike_store():
     return render_template("Nike_store.html", store=store)
 
 
-@app.route("/H&M_STORE")
+@app.route("/store/h&m")
 def hndm_store():
     store = Stores.query.get(2)
     return render_template("H&M_store.html", store=store)
 
 
-@app.route("/NOIZZ_STORE")
+@app.route("/store/noizz")
 def noizz_store():
     store = Stores.query.get(3)
     return render_template("Noizz_store.html", store=store)
 
-@app.route("/STUDIO_PASHA_STORE")
+@app.route("/store/studio_pasha")
 def studio_pasha_store():
     store = Stores.query.get(4)
     return render_template("Studio_Pasha_store.html", store=store)

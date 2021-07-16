@@ -9,7 +9,7 @@ from .Database import db, Users, Stores, Orders, Items
 @app.route("/")
 def home():
     title = "Fashi.on the way"
-    return render_template("index.html", title=title)
+    return render_template("Index.html", title=title)
 
 
 @app.route("/login")
@@ -52,6 +52,7 @@ def noizz_store():
     store = Stores.query.get(3)
     return render_template("Noizz_store.html", store=store)
 
+
 @app.route("/store/studio_pasha")
 def studio_pasha_store():
     store = Stores.query.get(4)
@@ -67,7 +68,7 @@ def form():
     server.starttls()
     server.login("sapir.matari@gmail.com", os.environ.get("Password_google"))
     server.sendmail("sapir.matari@gmail.com", email, message)
-    return render_template("index.html", email=email)
+    return render_template("Index.html", email=email)
 
 
 @app.route("/cart", methods=["POST", "GET"])
@@ -75,7 +76,7 @@ def cart():
     title = "Shopping cart"
     color = request.form.get("color")
     size = request.form.get("size")
-    price = request.form.get(("price"))
+    price = request.form.get("price")
     if color is None:
         color = ""
     if size is None:
@@ -85,7 +86,7 @@ def cart():
     return render_template("Cart.html", title=title, color=color, size=size, price=price)
 
 
-@app.route("/User", methods=["POST"])
+@app.route("/user", methods=["POST"])
 def user():
     title = "User's page"
     first_name = request.form.get("first_name")
@@ -109,10 +110,3 @@ def user():
     return render_template("User.html", title=title, last_name=last_name, first_name=first_name,
                            address=address, phone_number=phone_number,
                            email=email, password=password, type=type)
-
-
-# @app.route("/stores", methods=["GET"])
-# def stores():
-#     store = Stores.query.get(1)
-#     render_template("stores.html", store=store)
-

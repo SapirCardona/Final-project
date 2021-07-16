@@ -80,6 +80,8 @@ def cart():
         color = ""
     if size is None:
         size = ""
+    if price is None:
+        price = ""
     return render_template("Cart.html", title=title, color=color, size=size, price=price)
 
 

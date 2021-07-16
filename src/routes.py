@@ -42,15 +42,18 @@ def login_customer():
                            email=email, address=address, password=password,
                            type=type)
 
-@app.route("/NIKE_STORE")
+
+@app.route("/store/nike")
 def nike_store():
     store = Stores.query.get(1)
     return render_template("Nike_store.html", store=store)
+
 
 @app.route("/H&M_STORE")
 def hndm_store():
     store = Stores.query.get(2)
     return render_template("H&M_store.html", store=store)
+
 
 @app.route("/NOIZZ_STORE")
 def noizz_store():

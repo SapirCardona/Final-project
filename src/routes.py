@@ -9,15 +9,7 @@ from .Database import db, Users, Stores, Orders, Items
 @app.route("/")
 def home():
     title = "Fashi.on the way"
-    # users = Users.query.all()
-    # stores = Stores.query.get(1)
-    # orders = Orders.query.all()
-    # items = Items.query.get(store_id)
-    # print(users)
-    # print(stores)
-    # print(orders)
-    # print(items)
-    return render_template("index.html", title=title)
+    return render_template("Index.html", title=title)
 
 
 @app.route("/login")
@@ -42,22 +34,26 @@ def login_customer():
                            email=email, address=address, password=password,
                            type=type)
 
-@app.route("/NIKE_STORE")
+
+@app.route("/store/nike")
 def nike_store():
     store = Stores.query.get(1)
     return render_template("Nike_store.html", store=store)
 
-@app.route("/H&M_STORE")
+
+@app.route("/store/h&m")
 def hndm_store():
     store = Stores.query.get(2)
     return render_template("H&M_store.html", store=store)
 
-@app.route("/NOIZZ_STORE")
+
+@app.route("/store/noizz")
 def noizz_store():
     store = Stores.query.get(3)
     return render_template("Noizz_store.html", store=store)
 
-@app.route("/STUDIO_PASHA_STORE")
+
+@app.route("/store/studio_pasha")
 def studio_pasha_store():
     store = Stores.query.get(4)
     return render_template("Studio_Pasha_store.html", store=store)
@@ -72,23 +68,25 @@ def form():
     server.starttls()
     server.login("sapir.matari@gmail.com", os.environ.get("Password_google"))
     server.sendmail("sapir.matari@gmail.com", email, message)
-    return render_template("index.html", email=email)
+    return render_template("Index.html", email=email)
 
 
-@app.route("/Cart", methods=["POST", "GET"])
+@app.route("/cart", methods=["POST", "GET"])
 def cart():
     title = "Shopping cart"
     color = request.form.get("color")
     size = request.form.get("size")
-    price = request.form.get(("price"))
+    price = request.form.get("price")
     if color is None:
         color = ""
     if size is None:
         size = ""
+    if price is None:
+        price = ""
     return render_template("Cart.html", title=title, color=color, size=size, price=price)
 
 
-@app.route("/User", methods=["POST"])
+@app.route("/user", methods=["POST"])
 def user():
     title = "User's page"
     first_name = request.form.get("first_name")
@@ -112,10 +110,3 @@ def user():
     return render_template("User.html", title=title, last_name=last_name, first_name=first_name,
                            address=address, phone_number=phone_number,
                            email=email, password=password, type=type)
-
-
-# @app.route("/stores", methods=["GET"])
-# def stores():
-#     store = Stores.query.get(1)
-#     render_template("stores.html", store=store)
-

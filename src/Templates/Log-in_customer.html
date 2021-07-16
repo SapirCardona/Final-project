@@ -8,7 +8,7 @@
     <div class="col-sm-15">
       <div class="card-body">
         <h5 class="card-title">New user?</h5>
-          <form class="row g-3" action="/User" method="post">
+          <form class="row g-3" action="{{ url_for('user') }}" method="post">
               <div class="col-md-3">
                   <label for="inputFirstName" class="form-label">First Name</label>
                   <input name="first_name" type="first_name" class="form-control" id="inputFirstName">

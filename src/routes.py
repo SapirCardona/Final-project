@@ -13,7 +13,6 @@ def home():
     store2 = Stores.query.get(2)
     store3 = Stores.query.get(3)
     store4 = Stores.query.get(4)
-
     return render_template("Index.html", title=title, store1=store1, store2=store2, store3=store3, store4=store4)
 
 
@@ -23,9 +22,9 @@ def login():
     return render_template("Log-in.html", title=title)
 
 
-@app.route("/login_customer", methods=["GET"])
-def login_customer():
-    title = "login customer"
+@app.route("/sign_up", methods=["GET"])
+def sign_up():
+    title = "Sign up"
     """Create a user via query string parameters."""
     first_name = request.form.get("first_name")
     last_name = request.form.get("last_name")
@@ -34,7 +33,7 @@ def login_customer():
     password = request.form.get("password")
     address = request.form.get("address")
     type = request.form.get("type")
-    return render_template("Log-in_customer.html", title=title, first_name=first_name,
+    return render_template("Sign_up.html", title=title, first_name=first_name,
                            last_name=last_name, phone_number=phone_number,
                            email=email, address=address, password=password,
                            type=type)
@@ -73,7 +72,7 @@ def form():
         server.starttls()
         server.login("sapir.matari@gmail.com", os.environ.get("Password_google"))
         server.sendmail("sapir.matari@gmail.com", email, message)
-        return render_template("Index.html", email=email)
+        return render_template("Cart.html", email=email)
     else:
         return render_template("Cart.html")
 
@@ -117,10 +116,3 @@ def user():
     return render_template("User.html", title=title, last_name=last_name, first_name=first_name,
                            address=address, phone_number=phone_number,
                            email=email, password=password, type=type)
-
-
-# @app.route("/stores", methods=["GET"])
-# def stores():
-#     store = Stores.query.get(1)
-#     render_template("stores.html", store=store)
-

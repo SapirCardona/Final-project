@@ -29,7 +29,7 @@ function myFunction() {
     <br></br>
 
     <div>
-      <form action="login_customer" method="get">
+      <form action="{{ url_for('sign_up') }}" method="get">
           <p class="card-text">New user?</p>
           <button type="submit" class="btn btn-dark">Sign up</button>
       </form>

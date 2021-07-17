@@ -9,7 +9,12 @@ from .Database import db, Users, Stores, Orders, Items
 @app.route("/")
 def home():
     title = "Fashi.on the way"
-    return render_template("Index.html", title=title)
+    store1 = Stores.query.get(1)
+    store2 = Stores.query.get(2)
+    store3 = Stores.query.get(3)
+    store4 = Stores.query.get(4)
+
+    return render_template("Index.html", title=title, store1=store1, store2=store2, store3=store3, store4=store4)
 
 
 @app.route("/login")

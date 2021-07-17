@@ -62,13 +62,15 @@ def studio_pasha_store():
 @app.route("/form", methods=["POST"])
 def form():
     email = request.form.get("email")
-
-    message = "Your order has been confirmed!"
-    server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.starttls()
-    server.login("sapir.matari@gmail.com", os.environ.get("Password_google"))
-    server.sendmail("sapir.matari@gmail.com", email, message)
-    return render_template("Index.html", email=email)
+    if email:
+        message = "Your order has been confirmed!"
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login("sapir.matari@gmail.com", os.environ.get("Password_google"))
+        server.sendmail("sapir.matari@gmail.com", email, message)
+        return render_template("Index.html", email=email)
+    else:
+        return render_template("Cart.html")
 
 
 @app.route("/cart", methods=["POST", "GET"])

@@ -1,8 +1,8 @@
 {% extends 'Base.html' %}
 {% block content %}
 
-  <div class="container">
-    <img src="https://fullstop360.com/blog/wp-content/uploads/2020/09/Movement.jpg" width="1000" height="300" >
+  <div align="center">
+    <img src={{ store.image_file }}>
             <div class="card-body">
               <h5 class="card-text" align="center">Address: {{ store.address }}</h5>
                 <h5 class="card-text" align="center"> Hours: Sun - Thu 09:30 - 22:00, Friday 09:00 - 15:00, Saturday 10:00 - 23:00</h5>

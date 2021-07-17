@@ -5,6 +5,11 @@
 
   <div class="container">
     <img src="https://www.accessurf.org/wp-content/uploads/bfi_thumb/HM-Logo-2yase0t1xv1xw0mj2n80znqbgcrdqtejrwrrd88cr20opw6io.jpg" width="1000" height="300" >
+      <div class="card-body">
+        <h5 class="card-text" align="center">Address: {{ store.address }}</h5>
+        <h5 class="card-text" align="center"> Hours: Sun - Thu 09:30 - 22:00, Friday 09:30 - 15:00, Saturday 20:00 - 23:00</h5>
+        <h5 align="center" class="card-title">Minimum order: {{ store.minimum_order }}$  |   Shipping price: {{ store.shipping_price }}$</h5>
+      </div>
   </div>
 
 <div class="row row-cols-1 row-cols-md-4 g-4">

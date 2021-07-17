@@ -112,3 +112,10 @@ def user():
     return render_template("User.html", title=title, last_name=last_name, first_name=first_name,
                            address=address, phone_number=phone_number,
                            email=email, password=password, type=type)
+
+
+# @app.route("/stores", methods=["GET"])
+# def stores():
+#     store = Stores.query.get(1)
+#     render_template("stores.html", store=store)
+

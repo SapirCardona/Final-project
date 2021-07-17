@@ -12,9 +12,10 @@
     <div class="col">
       <form action="/store/h&m">
               <div class="card h-100">
-        <img src="https://therockbury.com/wp-content/uploads/2014/03/HM-logo.jpg" class="card-img-top" alt="...">
-          <h5 class="card-title" align="center">H&M</h5>
-          <p class="card-text">store description</p>
+                  <img src="https://therockbury.com/wp-content/uploads/2014/03/HM-logo.jpg" class="card-img-top" alt="...">
+                  <h5 class="card-title" align="center">{{ store4.name }}</h5>
+                  <p class="card-text">Shipping price: {{ store4.shipping_price }}$</p>
+                  <p class="card-text">Minimum order: {{ store4.minimum_order }}$</p>
               <div>
                 <button type="submit" id="shopping-bag" class="btn btn-dark">Go to H&M!</button>
               </div>
@@ -25,9 +26,10 @@
     <div class="col">
       <form action="/store/nike">
         <div class="card h-100">
-        <img src="https://i.pinimg.com/originals/d8/51/ef/d851efb8400966899b2a8035b37f356a.jpg" class="card-img-top" alt="...">
-          <h5 class="card-title" align="center">Nike</h5>
-          <p class="card-text">store description</p>
+            <img src="https://i.pinimg.com/originals/d8/51/ef/d851efb8400966899b2a8035b37f356a.jpg" class="card-img-top" alt="...">
+                  <h5 class="card-title" align="center">{{ store1.name }}</h5>
+                  <p class="card-text">Shipping price: {{ store1.shipping_price }}$</p>
+                  <p class="card-text">Minimum order: {{ store1.minimum_order }}$</p>
               <div>
                 <button type="submit" id="shopping-bag" class="btn btn-dark">Go to Nike!</button>
               </div>
@@ -39,8 +41,9 @@
       <form action="/store/noizz">
         <div class="card h-100">
         <img src="https://www.new4u.co.il/wp-content/uploads/2017/03/logo-yellow-800x800.jpg" class="card-img-top" alt="...">
-          <h5 class="card-title" align="center">Noizz</h5>
-          <p class="card-text">store description</p>
+                  <h5 class="card-title" align="center">{{ store3.name }}</h5>
+                  <p class="card-text">Shipping price: {{ store3.shipping_price }}$</p>
+                  <p class="card-text">Minimum order: {{ store3.minimum_order }}$</p>
               <div>
                 <button type="submit" id="noizz" class="btn btn-dark">Go to Noizz!</button>
               </div>
@@ -52,8 +55,9 @@
       <form action="/store/studio_pasha">
               <div class="card h-100">
         <img src="https://media.easy.co.il/images/PICS/4031595.jpg" class="card-img-top" alt="...">
-          <h5 class="card-title" align="center">Studio Pasha</h5>
-          <p class="card-text">store description</p>
+                  <h5 class="card-title" align="center">{{ store4.name }}</h5>
+                  <p class="card-text">Shipping price: {{ store4.shipping_price }}$</p>
+                  <p class="card-text">Minimum order: {{ store4.minimum_order }}$</p>
               <div>
                 <button type="submit" id="shopping-bag" class="btn btn-dark">Go to Studio Pasha!</button>
               </div>

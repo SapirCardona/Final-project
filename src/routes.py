@@ -1,9 +1,9 @@
 import os
 import smtplib
 
-from flask import render_template, request, make_response, before_render_template
+from flask import render_template, request
 from flask import current_app as app
-from .Database import db, Users, Stores, Orders, Items
+from .Database import db, Users, Stores
 
 
 @app.route("/")

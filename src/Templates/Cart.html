@@ -2,7 +2,7 @@
 {% block content %}
 <script>
 // When the user clicks on div, open the popup
-function myFunction() {
+function pop_validation_message() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 }
@@ -49,7 +49,7 @@ function myFunction() {
             <label for="exampleInputEmail1" class="form-label">Email:</label>
             <input type="email"  name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">Confirmation email will be sent to this address.
-                <div class="popup" onclick="myFunction()">
+                <div class="popup" onclick="pop_validation_message()">
                     <span class="popuptext" id="myPopup">Order conformed! please check your email.</span>
                     <button type="submit" class="btn btn-dark">CONFIRM</button>
                 </div>

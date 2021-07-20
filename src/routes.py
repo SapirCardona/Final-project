@@ -9,15 +9,13 @@ from .Database import db, Users, Stores
 @app.route("/")
 def home():
     title = "Fashi.on the way"
-    # Nike store >>>
-    store1 = Stores.query.get(1)
-    # H&M store >>>
-    store2 = Stores.query.get(2)
-    # Noizz store >>>
-    store3 = Stores.query.get(3)
-    # Studio Pasha >>>
-    store4 = Stores.query.get(4)
-    return render_template("Index.html", title=title, store1=store1, store2=store2, store3=store3, store4=store4)
+    Nike_store = Stores.query.get(1)
+    HndM_store = Stores.query.get(2)
+    Noizz_store = Stores.query.get(3)
+    Studio_Pasha_store = Stores.query.get(4)
+    return render_template("Index.html", title=title, Nike_store=Nike_store,
+                           HndM_store=HndM_store, Noizz_store=Noizz_store,
+                           Studio_Pasha_store=Studio_Pasha_store)
 
 
 @app.route("/login")

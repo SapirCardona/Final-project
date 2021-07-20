@@ -74,8 +74,8 @@ def form():
         message = "Your order has been confirmed!"
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("sapir.matari@gmail.com", os.environ.get("Password_google"))
-        server.sendmail("sapir.matari@gmail.com", email, message)
+        server.login("fashi.on.the.way.mail@gmail.com", os.environ.get("Password_google"))
+        server.sendmail("fashi.on.the.way.mail@gmail.com", email, message)
         return render_template("Cart.html", email=email)
     else:
         return render_template("Cart.html")

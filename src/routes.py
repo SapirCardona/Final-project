@@ -1,19 +1,21 @@
 import os
 import smtplib
 
-from flask import render_template, request, make_response, before_render_template
+from flask import render_template, request
 from flask import current_app as app
-from .Database import db, Users, Stores, Orders, Items
+from .Database import db, Users, Stores
 
 
 @app.route("/")
 def home():
     title = "Fashi.on the way"
-    store1 = Stores.query.get(1)
-    store2 = Stores.query.get(2)
-    store3 = Stores.query.get(3)
-    store4 = Stores.query.get(4)
-    return render_template("Index.html", title=title, store1=store1, store2=store2, store3=store3, store4=store4)
+    Nike_store = Stores.query.get(1)
+    HndM_store = Stores.query.get(2)
+    Noizz_store = Stores.query.get(3)
+    Studio_Pasha_store = Stores.query.get(4)
+    return render_template("Index.html", title=title, Nike_store=Nike_store,
+                           HndM_store=HndM_store, Noizz_store=Noizz_store,
+                           Studio_Pasha_store=Studio_Pasha_store)
 
 
 @app.route("/login")
@@ -70,8 +72,8 @@ def form():
         message = "Your order has been confirmed!"
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("sapir.matari@gmail.com", os.environ.get("Password_google"))
-        server.sendmail("sapir.matari@gmail.com", email, message)
+        server.login("fashi.on.the.way.mail@gmail.com", os.environ.get("Password_google"))
+        server.sendmail("fashi.on.the.way.mail@gmail.com", email, message)
         return render_template("Cart.html", email=email)
     else:
         return render_template("Cart.html")

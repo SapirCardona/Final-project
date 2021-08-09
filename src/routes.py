@@ -69,7 +69,10 @@ def studio_pasha_store():
 def form():
     email = request.form.get("email")
     if email:
-        message = "Your order has been confirmed!"
+        message = """Subject: Subject of mail!\n
+
+                content of mail."""
+
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         server.login("fashi.on.the.way.mail@gmail.com", os.environ.get("Password_google"))
